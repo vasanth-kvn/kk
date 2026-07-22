@@ -4,7 +4,8 @@ jobs:
   job-1:
    runs-on: ubuntu-latest
    steps:
-     - run: echo"step1"
+     - name: Print Step 1
+     - run: echo "step1"
      - run: data
      - run: hostname
      - run: free -m
