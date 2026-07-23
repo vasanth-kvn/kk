@@ -1,0 +1,11 @@
+name: test-01
+on: workflow_dispatch
+jobs:
+  job-01:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first
+      - run: | echo "fisrt-start"
+        date
+        hostname
+        free -m
