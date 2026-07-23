@@ -1,12 +1,14 @@
-name: test-01
+name: test-work
 on: workflow_dispatch
 jobs:
-  job-01:
+  job-1:
     runs-on: ubuntu-latest
     steps:
-      - name: first
+      - name: hello
         run: |
-          echo "fisrt-start"
+          echo " this is first line"
+          echo " this is second line"
           date
           hostname
           free -m
+
