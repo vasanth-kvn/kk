@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first
-      - run: | echo "fisrt-start"
-        date
-        hostname
-        free -m
+      - run: |
+          echo "fisrt-start"
+          date
+          hostname
+          free -m
