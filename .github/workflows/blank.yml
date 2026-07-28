@@ -10,5 +10,5 @@ jobs:
           echo " this is second line"
           date
           hostname
-          free -m
+        
 
