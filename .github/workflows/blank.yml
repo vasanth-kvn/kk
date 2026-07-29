@@ -1,5 +1,7 @@
 name: work-env
 on: push
+env:
+  APP_ENV: "dev"
 jobs:
   envs:
     env:
@@ -7,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: env-workflow-level
+        env:
+          APP_ENV: "PRODUCTION"
         run: echo "taking env from job-level $APP_ENV"
           
   
