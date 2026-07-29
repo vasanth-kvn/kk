@@ -1,16 +1,22 @@
-name: work-env
-on: push
-env:
-  APP_ENV: "dev"
+name: test-inputs
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:		
+        description: Select Environment
+        required: true
+        default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - uat
+      artifact_tag:
+        description: select git tag to deploy
+        required: true
 jobs:
-  envs:
-    env:
-      APP_ENV: "test"
+  test-input:
     runs-on: ubuntu-latest
     steps:
-      - name: env-workflow-level
-        env:
-          APP_ENV: "PRODUCTION"
-        run: echo "taking env from job-level $APP_ENV"
-          
-  
+      - name: deploy the application
+        run: echo " deploying the ${{ inputs.artifact_tag}} app into ${{ inputs.environment}}"
