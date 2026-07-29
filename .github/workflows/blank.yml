@@ -1,14 +1,12 @@
 name: work-env
 on: push
-env:
-  APP_ENV: "dev"
 jobs:
   envs:
     env:
-      APP_ENv: "test"
+      APP_ENV: "test"
     runs-on: ubuntu-latest
     steps:
       - name: env-workflow-level
-        run: echo "taking env from job-level $APP_ENv"
+        run: echo "taking env from job-level $APP_ENV"
           
   
