@@ -5,10 +5,10 @@ env:
 jobs:
   envs:
     env:
-      APP_ENV: "test"
+      APP_ENv: "test"
     runs-on: ubuntu-latest
     steps:
       - name: env-workflow-level
-        run: echo "taking env from job-level $APP_ENV"
+        run: echo "taking env from job-level $APP_ENv"
           
   
