@@ -9,6 +9,6 @@ jobs:
           echo "running by ${{github.actor}}
           echo "to ${{github.repository}}
       - name: all variables
-        run: echo ${{ toJson(github)}}
+        run: echo ${{toJson(github)}}
         
   
