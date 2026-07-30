@@ -1,12 +1,12 @@
-name: build and deploy
+name: build & deploy
 on: 
   pull_request:
-    types: 
+    types:
       - opened
       - synchronize
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: bulind
-        run: echo "building step
+      - name: build step
+        run: echo "building the application"
