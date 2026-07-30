@@ -1,15 +1,11 @@
 name: if-test-02
-on: 
-  push:
-    branches:
-      - main
-      - test
+on: push
 jobs:
   ifcase-2:
     runs-on: ubuntu-latest
     steps:
       - name: if case
-        if: github.actor =='vasanth' || github.actor == 'vasanth-kvn'
+        if: github.actor =='vasanth' || github.actor == 'vasanth-kvn1'
         run: echo "run if case work"
       - name: manual
         run: echo "my manually worked"
