@@ -7,6 +7,5 @@ jobs:
       - name: if case
         if: github.actor =='vasanth' || github.actor == 'vasanth-kvn1'
         run: echo "run if case work"
-      - name: manual
-        run: echo "my manually worked"
+  
         
