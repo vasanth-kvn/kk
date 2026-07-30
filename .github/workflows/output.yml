@@ -1,15 +1,16 @@
-name: if-case
+name: if-test-02
 on: 
   push:
     branches:
       - main
       - test
 jobs:
-  test:
-   runs-on: ubuntu-latest
-   steps:
-     - name: if-case1
-       if: github.ref =='refs/heads/main'
-       run: echo "this is main"
-     - name: if-not
-       run: echo this is manual
+  ifcase-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: if case
+        if: github.ref_name == 'main'
+        run: echo "run if case work
+      - name: manual
+        run: echo "my manually worked
+        
