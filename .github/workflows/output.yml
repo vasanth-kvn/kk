@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: if case
-        if: github.ref_name == 'main'
+        if: github.actor =='vasanth' || github.actor == 'vasanth-kvn'
         run: echo "run if case work"
       - name: manual
         run: echo "my manually worked"
