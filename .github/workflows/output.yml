@@ -1,5 +1,5 @@
 name: if-test-02
-on: push
+on: pull_request
 jobs:
   ifcase-2:
     runs-on: ubuntu-latest
