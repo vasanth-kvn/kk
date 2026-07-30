@@ -1,14 +1,23 @@
-name: context
-on: workflow_dispatch
+name: build and deploy
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    types: 
+      - opened
+      - synchronize
 jobs:
-  cont:
+  build:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
     steps:
-      - name: context-variable
-        run: |
-          echo "running by ${{ github.actor}}
-          echo "to ${{ github.repository}}
-      - name: all variables
-        run: echo "${{ toJson(github) }}"
+      - name: build
+        run: echo "building application"
+  test:
+    runs-on: ubuntu-latest
+    if: github.event_name =='push' && github.ref_name =='min'
+    steps:
+      - name: deploying
+        run: echo "deploying application"
         
-  
