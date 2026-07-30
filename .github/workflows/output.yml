@@ -1,11 +1,12 @@
-name: if-test-02
-on: pull_request
+name: build and deploy
+on: 
+  pull_request:
+    types: 
+      - opened
+      - synchronize
 jobs:
-  ifcase-2:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: if case
-        if: github.ref_name =='main'|| github.actor == 'vasanth-kvn1'
-        run: echo "run if case work"
-  
-        
+      - name: bulind
+        run: echo "building step
