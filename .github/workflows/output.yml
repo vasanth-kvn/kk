@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.ref_name == 'main'
+    if: github.event_name == 'pull_request'
     steps:
       - name: building
         run: echo "bulding the application"
