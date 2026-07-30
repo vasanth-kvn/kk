@@ -1,4 +1,4 @@
-name: build and deploy
+name: build and deploy app
 on: 
   push:
     branches:
@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name =='pull_request' 
     steps:
       - name: building
         run: echo "bulding application"
