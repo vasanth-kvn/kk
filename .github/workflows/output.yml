@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: if case
-        if: github.actor =='vasanth' || github.actor == 'vasanth-kvn1'
+        if: github.ref_name =='main'|| github.actor == 'vasanth-kvn1'
         run: echo "run if case work"
   
         
