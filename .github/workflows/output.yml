@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: if case
         if: github.ref_name == 'main'
-        run: echo "run if case work
+        run: echo "run if case work"
       - name: manual
-        run: echo "my manually worked
+        run: echo "my manually worked"
         
