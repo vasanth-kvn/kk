@@ -1,0 +1,15 @@
+name: if-case
+on: 
+  push:
+    branches:
+      - main
+      - test
+jobs:
+  test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: if-case1
+       if: github.ref == 'refs/heads/main'
+       run: echo "this is main"
+     - name: if-not
+       run: echo this is manual
