@@ -19,7 +19,7 @@ jobs:
       - name: perform code quality
         run: echo "deploying the on code on dev env"
   prod_deploy:
-    if:  github.ref_name == 'main' && github.event_name == 'push'
+    if:  github.ref_name =='main' && github.event_name =='push'
     runs-on: ubuntu-latest
     steps:
       - name: perform code quality
