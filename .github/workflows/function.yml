@@ -10,7 +10,7 @@ jobs:
    if: startsWith(github.ref_name,'features') && github.event_name == 'push'
    runs-on: ubuntu-latest
    steps:
-     - name: perform code quality
+     - name: performcode quality
      - run: echo "deploying code on evn"
   deploy-to-devloper:
     if: github.ref_name=='develop' && github.event_name== 'push'
