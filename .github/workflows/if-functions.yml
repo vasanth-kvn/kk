@@ -24,3 +24,18 @@ jobs:
     steps:
       - name: perform code quality
         run: echo "deploying the on code on prod env"
+  success_notification:
+    needs: ['quality_check','dev_deploy','prod_deploy']
+    if: always() && !failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: notify success
+        run: echo "success mail sent to team"
+  failure_notification:
+    needs: ['quality_check','dev_deploy','prod_deploy']
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: notify success
+        run: echo "failure mail sent to team"
+
