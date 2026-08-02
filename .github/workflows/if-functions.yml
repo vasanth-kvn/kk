@@ -37,5 +37,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: notify success
-        run: echo "failure mail sent to team"
+    run: echo "failure mail sent to team"
 
