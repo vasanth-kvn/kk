@@ -4,14 +4,16 @@ on:
     branches: 
     - main
     - develop
-    - feature
+    - feature/**
 jobs:
   quality_check:
     if: startsWith(github.ref_name,'feature') && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: perform code quality
-        run: echo "performing quality checks on code"
+        run: |
+         echo "performing quality checks on code"
+          exit 1       
   dev_deploy:
     if:  github.ref_name =='develop' && github.event_name == 'push'
     runs-on: ubuntu-latest
@@ -19,7 +21,7 @@ jobs:
       - name: perform code quality
         run: echo "deploying the on code on dev env"
   prod_deploy:
-    if:  github.ref_name == 'main' && github.event_name == 'push'
+    if:  github.ref_name =='main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: perform code quality
@@ -38,4 +40,3 @@ jobs:
     steps:
       - name: notify success
         run: echo "failure mail sent to team"
-
